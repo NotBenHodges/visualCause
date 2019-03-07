@@ -29,12 +29,35 @@ var data = [66,61,55,67]
         return d;
       })
       .attr("x",function(d,i){
-        return i * (w/data.length) + 5;
+        return i * (w/data.length) + 17;
       })
       .attr("y",function(d){
         return h - (d * 4) + 15;
       })
       .attr("fill","white");
+
+  var name = svg.append("text")
+      .text("Northeast")
+      .attr("x",5)
+      .attr("y",480)
+      .attr("fill","blue")
+
+  var name = svg.append("text")
+      .text("Midwest")
+      .attr("x",130)
+      .attr("y",480)
+      .attr("fill","blue")
+
+  var name = svg.append("text")
+      .text("South")
+      .attr("x",255)
+      .attr("y",480)
+      .attr("fill","blue")
+  var name = svg.append("text")
+      .text("West")
+      .attr("x",380)
+      .attr("y",480)
+      .attr("fill","blue")
 
 
 /*causeDataP.then(function(data)
