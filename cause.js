@@ -15,13 +15,26 @@ var data = [66,61,55,67]
         return i * (w/data.length);
       })
       .attr("y", function(d){
-        return h - d;
+        return h - (d * 4);
       })
       .attr("width",50)
       .attr("height",function(d){
+        return d * 4;
+      });
+  svg.selectAll("text")
+      .data(data)
+      .enter()
+      .append("text")
+      .text(function(d){
         return d;
       })
-
+      .attr("x",function(d,i){
+        return i * (w/data.length) + 5;
+      })
+      .attr("y",function(d){
+        return h - (d * 4) + 15;
+      })
+      .attr("fill","white");
 
 
 /*causeDataP.then(function(data)
